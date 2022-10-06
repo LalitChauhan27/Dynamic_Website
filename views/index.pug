@@ -1,0 +1,140 @@
+doctype html
+html
+    head
+        title Document
+        style
+            include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+            include ../static/css/style.css
+        script(src='../node_modules/jquery/dist/jquery.js')
+        script(src='../node_modules/bootstrap/dist/js/bootstrap.js')
+body
+    div.container-fluid
+        div.row
+            div.col-md-10.col-12.mx-auto
+                nav.navbar.navbar-expand-lg.bg-light
+                    .container-fluid
+                        a.navbar-brand(href='/') Help2Grow
+                        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                            span.navbar-toggler-icon
+                        #navbarSupportedContent.collapse.navbar-collapse
+                            ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+                                li.nav-item
+                                    a.nav-link.active(aria-current='page' href='/') Home
+                                li.nav-item
+                                    a.nav-link(href='#aboutid') About
+                                li.nav-item
+                                    a.nav-link(href='#serviceid') Services
+                                li.nav-item
+                                    a.nav-link(href='#map') Maps
+                                li.nav-item
+                                    a.nav-link(href='#contactid') Contact Us
+    div.container-fluid.mt-5
+        div.row
+            div.col-md-10.col-12.mx-auto
+                div.row
+                    div.col-md-6.col-12.hero-text.order-md-0.order-1.d-flex.justify-content-center.align-items-start.flex-column
+                        h1 WE WILL HELP YOU TO
+                        h1 GROW YOUR BUSINESS
+                        p
+                            | We are the team of 
+                            span.fw-bold Professional Developers🔥
+                        button.btn.btn-primary(type='button') Read more
+                    div.col-md-6.col-12.hero-text.order-md-1.order-0
+                        figure
+                            img(src='../static/img/growth.svg', alt="growth image")
+    
+    //- About us section
+    div.container-fluid.mt-5#aboutid
+        div.row
+            div.col-md-10.col-12.mx-auto.about-style
+                h1.text-center.main-heading About Us
+                p.text-center.sub-heading Grow Your Business With Us
+                div.row
+                    div.col-md-6.col-12.hero-text
+                        figure
+                            img(src='../static/img/about.svg', alt="about image")
+                    
+                    div.col-md-6.col-12.hero-text.d-flex.justify-content-center.align-items-start.flex-column
+                        h1 WE ARE THE PROFESSIONAL DEVELOPERS 🔥
+                        p
+                            | Welcome to 
+                            span.fw-bold Help2Grow
+                            | . We will proivide you the best business solutions.
+                        button.btn.btn-primary(type='button') Read more
+    //- Services section start here
+    div.container-fluid.mt-5#serviceid
+        div.row
+            div.col-md-10.col-12.mx-auto.about-style
+                h1.text-center.main-heading Our Services
+                p.text-center.sub-heading Grow Your Business With Us
+                div.row
+                    div.col-md-4
+                        div.box
+                            div.our-services.settings
+                                div.icon
+                                    img(src="https://i.imgur.com/6NKPrhO.png", alt="settings image")
+                                h4 Settings
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, rerum.
+                    div.col-md-4
+                        div.box
+                            div.our-services.settings
+                                div.icon
+                                    img(src="https://i.imgur.com/6NKPrhO.png", alt="Speed image")
+                                h4 SpeedUp
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, rerum.
+                    div.col-md-4
+                        div.box
+                            div.our-services.privacy
+                                div.icon
+                                    img(src="https://i.imgur.com/AgyneKA.png", alt="privacy image")
+                                h4 Privacy
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, rerum.
+                    div.col-md-4
+                        div.box
+                            div.our-services.backups
+                                div.icon
+                                    img(src="https://i.imgur.com/vdH9LKi.png", alt="backup image")
+                                h4 Backups
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, rerum.
+                    div.col-md-4
+                        div.box
+                            div.our-services.ssl
+                                div.icon
+                                    img(src="https://i.imgur.com/v6OnUqu.png", alt="ssl image")
+                                h4 SSL secured
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, rerum.
+                    div.col-md-4
+                        div.box
+                            div.our-services.database
+                                div.icon
+                                    img(src="https://i.imgur.com/VzjZw9M.png", alt="database image")
+                                h4 Database
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, rerum.
+    //- section for map
+    section#map
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224612.44385312876!2d77.17898805135995!3d28.402069847302137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdc15f5a424b1%3A0xe4f50576c850e0f2!2sFaridabad%2C%20Haryana!5e0!3m2!1sen!2sin!4v1664899072902!5m2!1sen!2sin' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+    
+    //- contact form start here
+    div.container-fluid.mt-5.contact-style#contactid
+        div.row
+            div.col-md-10.col-12.mx-auto
+                h1.text-center.main-heading Contact Us 
+                p.text-center.sub-heading We will happy to help you
+                div.row
+                    div.col-md-6.col-12.mx-auto
+                        form(action="/contact", method="POST")
+                            div.form-group
+                                label(for="exampleInputPassword1") Name
+                                input(type="text", class="form-control", id="exampleInputPassword1", placeholder="Enter your full name", name="name")
+                            div.form-group
+                                label(for="exampleInputEmail1") Email Address
+                                input(type="email", class="form-control", id="exampleInputEmail1", placeholder="Enter your email", name="email")
+                                small#emailHelp.form-text.text-muted We will never share your email with anyone.
+                            div.form-group
+                                label(for="exampleInputPassword1") Phone
+                                input(type="tel", class="form-control", id="exampleInputPassword1", placeholder="Enter your phone number", name="phone")
+                            div.form-group
+                                label(for="exampleInputPassword1") Message
+                                input(type="text", class="form-control", id="exampleInputPassword1", placeholder="Type your message here", name="message")
+                            
+                            button.btn.btn-primary.my-2(type='submit') Submit
